@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- icons -->
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- mapbox api -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>Tethics Excellence Academy</title>
+</head>
+<body>
+
+  <!-- header section -->
+
+  <header id="header">
+    <div id="navbar">
+       <div class="hamburger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+       </div>
+       <div class="logo">
+          <a href="index.html" class="tethics-logo">Tethics</a>
+       </div>
+       <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/pages/facilities.html">Facilities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li id="login-button"><a href="pages/login.html"><img src="assets/person-outline.svg" id="icon" alt=""></a></li>
+       </ul>
+    </div>
+ </header>
+
+
+
+  <!-- banner section -->
+
+  <section class="banner">
+    <h1>Tethics Excellence Academy</h1>
+    <h2>A Building With Four Walls And Tomorrow Inside</h2>
+    <p>Our mission is to work together to build a safe, respectful and nurturing environment focused on maximizing each child’s sense of wellbeing and acquisition of skills for life and learning.
+      We foster an enthusiastic, creative community of learners prepared to continue their intellectual, emotional, and physical development.
+    </p>
+    <div class="btn-main">
+        <button onClick="location.href='pages/login.html'" class="char-btn">Dashboard <img src="/assets/arrow-forward-outline.svg" width="27px" height="20px" alt=""></button>
+    </div>
+  </section>
+
+
+
+  <!-- awards section -->
+
+  <div class="container">
+    <div class="details">
+       <h1>School Awards & Ranking</h1>
+    </div>
+    <div class="main-box">
+       <div class="box box-main">
+          <div class="icon">
+             <img src="assets/awards/1.jpg" width="150px" height="auto" alt="">
+          </div>
+          <p>Outstanding CBSE School Award</p>
+       </div>
+       <div class="box box-main">
+          <div class="icon">
+             <img src="assets/awards/4.jpg" width="150px" height="150px" alt="">
+          </div>
+          <p>British Council Certified</p>
+       </div>
+       <div class="box box-main">
+          <div class="icon">
+             <img src="assets/awards/3.jpg" width="150px" height="150px" alt="">
+          </div>
+          <p>1st in India School Rankings</p>
+       </div>
+    </div>
+  </div>
+
+
+
+  <!-- about section -->
+
+  <div class="features" id="about">
+    <div class="flex">
+       <div class="flex-info">
+          <h1 style="font-size: 3.3rem;">About Us</h1>
+          <br>
+          <p>Tethics Excellence Academy was founded in 2020, with the mission of delivering excellence in education and at the same time equipping the young learners with the most modern technologies to become a future leader.           </p>
+       </div>
+       <div class="flex-image">
+          <img src="/assets/logo/logo.jpeg" alt="">
+       </div>
+    </div>
+  </div>
+
+
+
+  <!-- vision section -->
+
+  <div class='vision'>
+      <div class='row'>
+        <div class='column'>
+            <div class='vision-column'>
+              <h1>Our Vision</h1>
+              <p>Our vision is to empower students to acquire, demonstrate, articulate and value knowledge and skills that will support them, as life-long learners, to participate in and contribute to the global world and practise the core values of the school: respect, tolerance & inclusion, and excellence. We strive to support this environment by building a more inclusive curriculum, addressing a range of learning styles, offering a wide array of diversity efforts and programs, and by participating in the wider community.
+              </p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+
+  <!-- facilities section -->
+
+  <section class="facilities" id="facilities">
+    <h1>Facilities</h1>
+    <p>Our commitment to excellence extends to the facilities we provide on campus. The infrastructure, sports arenas, music room, transport arrangements, library, laboratories, medical facilities are all designed to be a part of the green surroundings. TAS is a well-designed campus which offers all the modern facilities that are needed to provide the students a safe, secure and happy learning environment.            </p>
+    <div class="btn-main">
+       <button onClick="location.href='/pages/facilities.html'" class="char-btn">See Facilities <img src="/assets/arrow-forward-outline.svg" width="27px" height="20px" alt=""></button>
+    </div>
+  </section>
+
+
+
+  <!-- image gallery section -->
+
+  <div class="container-gal" id="gallery">
+    <div class="details-gal">
+       <h1>Image Gallery</h1>
+    </div>
+    <div class="main-box-gal">
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint1.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint2.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint3.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint4.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint5.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint6.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint7.jpg" width="350px" height="236px" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint8.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+       <div class="box-gal box-main-gal">
+          <div class="icon-gal">
+             <img src="assets/breakpoint9.jpg" width="350px" height="auto" alt="">
+          </div>
+       </div>
+    </div>
+  </div>
+
+
+
+  <!-- map section -->
+
+  <div class="location" style="text-align: center; margin-top: 100px;">
+    <h1 style="font-size: 3.3rem;">Our School's Location</h1>
+    <p style="margin-top: 30px; font-size: 1.5rem;"> <b>Address: </b> 221B Quantum Street, Zone-AI, Bhopal, Madhya Pradesh, India</p>
+    <div id="map"></div>
+  </div>
+
+
+
+  <!-- bottom footer section -->
+
+  <div class="bottom">
+    <span id="bottom-p">
+       <center>
+          Tethics Excellence Academy | Made with &hearts; by Sahil Jain
+       </center>
+    </span>
+  </div>
+
+
+
+  <!-- scroll to top button -->
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon style="font-size: 1.3rem;" name="arrow-up-outline"></ion-icon></button>
+
+
+
+  <!-- js -->
+
+
+  <!-- mapbox api integration -->
+
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWwwNiIsImEiOiJja3NlYXAzcGUweXZzMm9vZDF6a213a3YwIn0.2TqRpF9Ot8N3TcY5vKY0ag';
+      const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11', 
+          center: [77.4126, 23.2599], 
+          zoom: 12
+      });
+
+      const marker1 = new mapboxgl.Marker()
+      .setLngLat([77.4126, 23.2599])
+      .addTo(map);
+  </script>
+
+
+
+  <!-- scroll to top js -->
+
+  <script>
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+  </script>
+
+
+  <!-- custom js -->
+  
+  <script src="js/main.js"></script>
+
+</body>
+</html>

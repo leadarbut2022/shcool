@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- icons -->
+
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- mapbox api -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+    <!-- graph -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            packages: ['corechart']
+        });
+    </script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>Tethics | Dashboard</title>
+</head>
+<body>
+
+  <!-- header -->
+
+  <header class="header">
+    <h1 id="header-head">
+      Dashboard
+    </h1>
+  </header>
+
+
+
+  <!-- navbar -->
+
+  <div class="nav" id="navbar">
+    <nav class="nav-container">
+        <div>
+          <a href="#" class="nav-link nav-logo">
+            <i class='bx bx-chat nav-icon' ></i>
+            <span class="nav-logo-name">Tethics</span>
+          </a>
+          <div class="nav-list">
+              <div class="nav-items">
+
+                <a href="#" class="nav-link active">
+                  <i class='bx bx-notepad nav-icon' ></i>
+                  <span class="nav-name">Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-user-pin nav-icon'></i>
+                  <span class="nav-name">Profile</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-bar-chart-alt nav-icon' ></i>
+                  <span class="nav-name">Attendance</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-paper-plane nav-icon' ></i>
+                  <span class="nav-name">Circulars</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-paperclip nav-icon' ></i>
+                  <span class="nav-name">Homework</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-money nav-icon' ></i>
+                  <span class="nav-name">Fees</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-time nav-icon' ></i>
+                  <span class="nav-name">Time Table</span>
+                </a>
+
+                <a href="#" class="nav-link ">
+                  <i class='bx bx-camera nav-icon' ></i>
+                  <span class="nav-name">Join Class</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                  <i class='bx bx-message-rounded-dots nav-icon'></i>
+                  <span class="nav-name">Discussion</span>
+                </a>
+
+              </div>
+           </div>
+        </div>
+        <a href="/index.html" class="nav-link nav-logout">
+          <i class='bx bx-log-out nav-icon' ></i>
+          <span class="nav-name">Log Out</span>
+        </a>
+    </nav>
+  </div>
+
+
+
+  <!-- dashboard section -->
+
+  <main>
+      <section>
+        <div class="row">
+          <div class="column">
+            <div class="card1">
+              <h3>Attendance This Month</h3>
+              <p>August</p>
+              <p>14/17</p>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card2">
+              <h3>Homeworks Submitted</h3>
+              <p>August</p>
+              <p>5/7</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card3">
+              <h3>Fees</h3>
+              <p>Pending</p>
+              <p>₹12,000 due</p>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card4">
+              <h3>Upcoming Class</h3>
+              <p>Maths</p>
+              <p>9:41 a.m.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row-two">
+        <div class="column-two">
+          <h2 style="text-align: center;">Your Live Location</h2>
+          <div id="map"></div>
+        </div>
+        <div class="column-two">
+          <h2 style="text-align: center;">Your Attendance</h2>
+          <div id="container" style="width: 550px; height: 400px; margin-top: 20px; margin-left: 100px;"></div>
+        </div>
+      </div>
+  </main>
+
+
+
+  <!-- js -->
+
+
+  <!-- mapbox api integration -->
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWwwNiIsImEiOiJja3NlYXAzcGUweXZzMm9vZDF6a213a3YwIn0.2TqRpF9Ot8N3TcY5vKY0ag';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [77.1888, 28.6550],
+        zoom: 9 
+    });
+
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+        })
+    );
+    const marker1 = new mapboxgl.Marker()
+    .setLngLat([77.1888, 28.7095])
+    .addTo(map);
+  </script>
+
+
+  <!-- attendance graph -->
+
+  <script language="JavaScript">
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Month', 'Days'],
+            ['March', 15],
+            ['April', 18],
+            ['May', 12],
+            ['June', 21],
+            ['July', 20],
+            ['August', 14]
+        ]);
+        var options = {
+            title: 'Attendance',
+            isStacked: true
+        };
+        var chart = new google.visualization.BarChart(document.getElementById('container'));
+        chart.draw(data, options);
+    }
+    google.charts.setOnLoadCallback(drawChart);
+  </script>
+  
+  <!-- custom js -->
+
+  <script src="js/main.js"></script>
+        
+</body>
+</html>
